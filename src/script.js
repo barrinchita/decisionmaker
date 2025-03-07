@@ -1,0 +1,1 @@
+let terms = document.getElementById('terms');

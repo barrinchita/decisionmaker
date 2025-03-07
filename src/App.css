@@ -1,38 +1,240 @@
-.App {
-  text-align: center;
+.genCon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-color: rgb(123, 206, 206);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.con{
+  background-color: white;
+  display: flex;
+  width: 40em;
+  border-radius: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.part1{
+  width: 20em;
+
+  padding: .5em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input{
+  width: 15em;
+  font-size: 20px;
+  border: 1px solid rgb(59, 59, 59);
+  border-radius: 5px;
+}
+
+.part1Div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.part1Div button{
+  width: 6em;
+  height: 2em;
+  background-color: transparent;
+  border: none;
+  text-decoration: underline;
+}
+
+.part1Div h2{
+  font-size: 18px;
+}
+
+.shortPart1{
+  display: flex;
+}
+
+.shortPart1div{
+  position: relative;
+}
+
+.shortPart1 input{
+  width: 6em;
+}
+
+.shortPart1 span{
+  position: absolute;
+  right: 2.5em;
+  bottom: 0.2em;
+}
+
+.mortgagelast{
+  /* background-color: pink; */
+}
+
+.mortgagelastdiv2{
+  position: relative;
+}
+
+.mortgagelastdiv2 span{
+  position: absolute;
+  left: 5em;
+}
+
+.mortgagelastdiv2 input{
+  position: absolute;
+  left: -5em;
+}
+
+.mortgagelastdiv2, .mortgageLastDiv3{
+  display: flex;
+  border: 2px solid black;
+  padding: .1em;
+  border-radius: 5px;
+  display: flex;
+  height: 1.5em;
+  gap: 1em;
+}
+
+.mortgageLastDiv3{
+  display: flex;
+  margin-top: 1em;
+
+}
+
+.mortgageLastDiv3 input{
+  width: 1em;
+}
+
+.mortgageBtn{
+  display: flex;
+  justify-content: center;
+  padding-top: 1em;
+}
+
+.mortgageBtn button{
+  border: none;
+  padding: .3em;
+  border-radius: 10px;
+  background-color: rgb(186, 238, 0);
+  color: black;
+  padding: .5em;
+}
+
+.mortgage2{
+  padding: .5em;
+  margin-left: 2em;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  padding-left: 2em;
+  border-bottom-left-radius: 20px;
+  background-color: rgb(41, 41, 43);
+}
+
+.mortgage2 h3{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.mortgage2 p{
+  color: rgb(230, 230, 230);
+  text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.amountDiv{
+  display: flex;
+  flex-direction: column;
+  gap: .4em;
+  position: relative;
+  margin-bottom: 1em;
+}
+
+.amountDiv span{
+  position: absolute;
+  top: 2em;
+  background-color: gray;
+  width: 2em;
+  display: flex;
+  justify-content: center;
+  height: 1.7em;
+  top: 1.7em;
+  border-top-left-radius: 5px;
+  color: white;
+  align-items: center;
+  border-bottom-left-radius: 5px;
+}
+
+.amountDiv input{
+  padding-left: 2em;
+}
+
+.shortPart1div{
+  gap: .5em;
+  display: flex;
+  flex-direction: column;
+  margin-right: 5.7em;
+}
+
+.interest{
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+}
+
+.repayment{
+  border-top: 3px solid;
+  border-top-color: rgb(177, 240, 4);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+
+}
+
+.repayment h3{
+  color: rgb(177, 240, 4);
+}
+
+.totalRepay{
+  border-top: 2px solid rgb(177, 240, 4);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  align-items: center;
+}
+
+.totalRepay h3{
+  margin-top: -.6em;
+}
+
+@media screen and (max-width: 667px) {
+  .con{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 4em;
+    margin-top: 10em;
   }
-  to {
-    transform: rotate(360deg);
+
+  .part1Div{
+    flex-direction: column;
+    justify-content: left;
+    align-items: left;
+  }
+
+  .shortPart1{
+    flex-direction: column;
+    align-items: left;
+  }
+
+  .shortPart1 input{
+    width: 100%;
+  }
+
+  .input1{
+    width: 100px;
+  }
+
+  .mortgage2{
+    border-radius: 0;
+    height: 15em;
+    margin-top: 2em;
   }
 }

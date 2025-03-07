@@ -1,10 +1,12 @@
 import logo from './logo.svg';
 import './App.css';
 
+import Morgage from './Morgage';
+
 function App() {
   return(
     <>
-      <h1>React App</h1>
+      <Morgage />
     </>
   )
 }
