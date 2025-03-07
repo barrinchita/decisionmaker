@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./App.css";
 
@@ -9,23 +9,35 @@ function Morgage() {
   const [mortgageType, setMortgageType] = React.useState("repayment");
   const [monthlyPayment, setMonthlyPayment] = React.useState(0);
 
+  const [totalPayment, setTotalPayment] = useState(0)
+
   const calculateMortgage = () => {
     const principal = parseFloat(mortgageAmount);
     const years = parseFloat(mortgageTerm);
     const rate = parseFloat(interestRate) / 100 / 12;
     const numberOfPayments = years * 12;
+    let payment = 0;
 
     if (mortgageType === "repayment") {
-      // Calculate repayment mortgage
-      const payment =
+     
+      const totalRepayment = payment * numberOfPayments;
+      setTotalPayment(totalRepayment)
+
+      payment =
         (principal * rate * Math.pow(1 + rate, numberOfPayments)) /
         (Math.pow(1 + rate, numberOfPayments) - 1);
       setMonthlyPayment(isNaN(payment) ? 0 : payment.toFixed(2));
     } else {
-      // Calculate interest-only mortgage
-      const payment = principal * rate;
+
+
+
+      payment = principal * rate;
       setMonthlyPayment(isNaN(payment) ? 0 : payment.toFixed(2));
-    }
+    } 
+
+    const totalRepayment = (payment * numberOfPayments).toFixed(2);
+    setTotalPayment(totalRepayment)
+
   };
 
   const clearAll = () => {
@@ -128,7 +140,7 @@ function Morgage() {
                 <div className="totalRepay">
                   <p>Total you'll repay over the term</p>
 
-                  <h3>£</h3>
+                  <h3>£ {totalPayment} </h3>
                 </div>
               </>
             )}

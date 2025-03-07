@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 100vh;
   background-color: rgb(123, 206, 206);
 }
 
@@ -77,12 +77,12 @@ input{
 
 .mortgagelastdiv2 input{
   position: absolute;
-  left: -5em;
+  left: -6.5em;
 }
 
 .mortgagelastdiv2, .mortgageLastDiv3{
   display: flex;
-  border: 2px solid black;
+  border: .5px solid gray;
   padding: .1em;
   border-radius: 5px;
   display: flex;
@@ -124,7 +124,8 @@ input{
   justify-content: center;
   padding-left: 2em;
   border-bottom-left-radius: 20px;
-  background-color: rgb(41, 41, 43);
+  background-color: rgb(5, 5, 39);
+  width: 20em;
 }
 
 .mortgage2 h3{
@@ -147,14 +148,14 @@ input{
 .amountDiv span{
   position: absolute;
   top: 2em;
-  background-color: gray;
+  background-color: rgb(206, 237, 255);
   width: 2em;
   display: flex;
   justify-content: center;
   height: 1.7em;
   top: 1.7em;
   border-top-left-radius: 5px;
-  color: white;
+  color: rgb(0, 0, 0);
   align-items: center;
   border-bottom-left-radius: 5px;
 }
@@ -174,6 +175,11 @@ input{
   display: flex;
   flex-direction: column;
   gap: .5em;
+  position: relative;
+}
+
+.shortPart1 span{
+  right: 1.5em;
 }
 
 .repayment{
@@ -203,7 +209,17 @@ input{
   margin-top: -.6em;
 }
 
+input{
+  border: .5px solid gray;
+  width: 14em;
+}
+
 @media screen and (max-width: 667px) {
+
+  .genCon{
+    padding-bottom: 10em;
+  }
+
   .con{
     display: flex;
     flex-direction: column;
